@@ -5,12 +5,11 @@ class Solution:
         for i in range(len(matrix)):
             nums = [0] * len(matrix[i])
             for j in range(i, len(matrix)):
-                for k in range(len(nums)):
-                    nums[k] += matrix[j][k]
                 count = {0: 1}
                 s = 0
-                for x in nums:
-                    s += x
+                for k in range(len(nums)):
+                    nums[k] += matrix[j][k]
+                    s += nums[k]
                     answer += count.get(s - target, 0)
                     count[s] = count.get(s, 0) + 1
         return answer
