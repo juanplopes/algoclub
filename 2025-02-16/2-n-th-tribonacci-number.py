@@ -1,6 +1,5 @@
 class Solution:
+    @functools.cache
     def tribonacci(self, n):
-        a, b, c = 0, 1, 1
-        for i in range(n):
-            a, b, c = b, c, a+b+c
-        return a
+        if n <= 2: return (0,1,1)[n]
+        return self.tribonacci(n-1) + self.tribonacci(n-2) + self.tribonacci(n-3)

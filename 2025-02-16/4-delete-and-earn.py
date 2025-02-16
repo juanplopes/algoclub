@@ -5,5 +5,5 @@ class Solution:
         @functools.cache
         def solve(i):
             if i < 0: return 0
-            return max(C[i] * i + solve(i - 2), solve(i-1))
+            return max(C[i] * i + solve(i-2), solve(i-1))
         return solve(max(nums))
