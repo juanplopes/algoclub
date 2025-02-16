@@ -1,4 +1,3 @@
-import functools
 class Solution:
     def rob(self, nums):
         a, b = 0, nums[0]
