@@ -1,3 +1,4 @@
+import functools
 class Solution:
     @functools.cache
     def tribonacci(self, n):
